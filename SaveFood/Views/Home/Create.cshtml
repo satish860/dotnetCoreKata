@@ -1,0 +1,12 @@
+﻿@model SaveFood.Models.Resturant
+@using SaveFood.Models;
+
+<h1>Create Resturant</h1>
+
+<div>
+    <input asp-for="Name" />
+    <select asp-for="CusineType" 
+            asp-items="@Html.GetEnumSelectList<CusineType>()">
+        
+    </select>
+</div>

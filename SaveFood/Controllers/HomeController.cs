@@ -28,5 +28,10 @@ namespace SaveFood.Controllers
             var model = this.ResturantData.GetResturant(id);
             return View(model);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
