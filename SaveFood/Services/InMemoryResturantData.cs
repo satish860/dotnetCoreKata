@@ -27,5 +27,11 @@ namespace SaveFood.Services
         {
             return this.resturants;
         }
+
+        public void SaveResturant(Resturant resturant)
+        {
+            resturant.Id = this.resturants.Max(p => p.Id) + 1;
+            this.resturants.Add(resturant);
+        }
     }
 }

@@ -29,9 +29,17 @@ namespace SaveFood.Controllers
             return View(model);
         }
 
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Resturant resturant)
+        {
+            this.ResturantData.SaveResturant(resturant);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

@@ -11,5 +11,7 @@ namespace SaveFood.Services
         List<Resturant> GetResturants();
 
         Resturant GetResturant(int id);
+
+        void SaveResturant(Resturant resturant);
     }
 }
