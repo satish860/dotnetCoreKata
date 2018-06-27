@@ -38,8 +38,15 @@ namespace SaveFood.Controllers
         [HttpPost]
         public IActionResult Create(Resturant resturant)
         {
-            this.ResturantData.SaveResturant(resturant);
-            return RedirectToAction(nameof(Index));
+            if (ModelState.IsValid)
+            {
+                this.ResturantData.SaveResturant(resturant);
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

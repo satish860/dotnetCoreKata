@@ -8,4 +8,5 @@
     <select asp-for="CusineType"
             asp-items="@Html.GetEnumSelectList<CusineType>()"></select>
     <input type="submit" name="save" value="Save" />
+    <div asp-validation-summary="All"></div>
 </form>
