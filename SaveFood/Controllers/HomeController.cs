@@ -36,6 +36,7 @@ namespace SaveFood.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(Resturant resturant)
         {
             if (ModelState.IsValid)
