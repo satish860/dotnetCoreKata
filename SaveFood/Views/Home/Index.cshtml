@@ -10,6 +10,7 @@
             <tr>
                 <td>@item.Id</td>
                 <td>@item.Name</td>
+                <td><a asp-action="details" asp-route-id="@item.Id" >More</a></td>
             </tr>
         }
     </table>

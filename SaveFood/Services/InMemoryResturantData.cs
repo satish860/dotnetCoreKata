@@ -8,14 +8,24 @@ namespace SaveFood.Services
 {
     public class InMemoryResturantData : IResturantData
     {
-        public List<Resturant> GetResturants()
+        public List<Resturant> resturants;
+        public InMemoryResturantData()
         {
-            return new List<Resturant>
+            this.resturants= new List<Resturant>
             {
                 new Resturant{Id=1,Name="Pizza Hut"},
                 new Resturant{Id=2,Name="Baskin Robins"},
                 new Resturant{Id=3,Name="Sansar"}
             };
+        }
+        public Resturant GetResturant(int id)
+        {
+           return this.resturants.FirstOrDefault(p => p.Id==id);
+        }
+
+        public List<Resturant> GetResturants()
+        {
+            return this.resturants;
         }
     }
 }

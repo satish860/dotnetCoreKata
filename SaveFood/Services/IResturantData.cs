@@ -9,5 +9,7 @@ namespace SaveFood.Services
     public interface IResturantData
     {
         List<Resturant> GetResturants();
+
+        Resturant GetResturant(int id);
     }
 }
