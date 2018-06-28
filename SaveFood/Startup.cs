@@ -44,7 +44,7 @@ namespace SaveFood
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
         }
