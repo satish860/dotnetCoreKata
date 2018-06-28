@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SaveFood.Models;
 using SaveFood.Services;
 using System;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace SaveFood.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         public HomeController(IResturantData resturantData)
